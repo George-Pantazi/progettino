@@ -15,3 +15,19 @@ def visualizza_lista():
             print(f"{i}. {elemento}")
     else:
         print("La lista della spesa è vuota.")
+
+#4 
+def rimuovi_elemento():
+    if len(lista_della_spesa) == 0:
+        print("La lista è vuota, non puoi rimuovere nulla.")
+        return
+    visualizza_lista()
+    try:
+        indice = int(input("Inserisci il numero dell'elemento da rimuovere (ad esempio 1 per il primo): ")) - 1
+        if 0 <= indice < len(lista_della_spesa):
+            elemento_rimosso = lista_della_spesa.pop(indice)
+            print(f"{elemento_rimosso} è stato rimosso dalla lista.")
+        else:
+            print("Indice non valido.")
+    except ValueError:
+        print("Per favore inserisci un numero valido.")
