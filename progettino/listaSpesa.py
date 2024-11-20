@@ -1,1 +1,1 @@
-    
+lista_spesa = []
